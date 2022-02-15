@@ -1,0 +1,28 @@
+{
+  "name": "chat-irt",
+  "version": "1.0.0",
+  "description": "chat IRT (In Real Time) utilizando sockets",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micheldavrdz/Chat-IRT.git"
+  },
+  "author": "Michel Dávila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micheldavrdz/Chat-IRT/issues"
+  },
+  "homepage": "https://github.com/micheldavrdz/Chat-IRT#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
