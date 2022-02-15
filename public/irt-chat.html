@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chat IRT</title>
+</head>
+<body>
+    <div class="chat-container">
+      <header class="chat-header">
+        <h1><i class="fa-solid fa-message"></i> Chat IRT</h1>
+        <a href="index.html" class="btn">Salir del canal</a>
+      </header>
+      <main class="chat-main">
+        <div class="chat-sidebar">
+          <h3><i class="fa-solid fa-hashtag"></i> Nombre del canal:</h3>
+          <h2 id="room-name">General</h2>
+          <h3><i class="fa-solid fa-user"></i> Usuarios</h3>
+          <ul id="users">
+            <li>Usuario 1</li>
+            <li>Usuario 2</li>
+            <li>Usuario 3</li>
+            <li>Usuario 4</li>
+            <li>Usuario 5</li>
+          </ul>
+        </div>
+        <div class="chat-messages">
+                      <div class="message">
+                          <p class="meta">Usuario <span>9:12pm</span></p>
+                          <p class="text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+                              repudiandae.
+                          </p>
+                      </div>
+                      <div class="message">
+                          <p class="meta">Usuario <span>9:15pm</span></p>
+                          <p class="text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+                              repudiandae.
+                          </p>
+                      </div>
+        </div>
+      </main>
+      <div class="chat-form-container">
+        <form id="chat-form">
+          <input
+            id="msg"
+            type="text"
+            placeholder="Escriba su mensaje"
+            required
+            autocomplete="off"
+          />
+          <button class="btn"></i>Enviar</button>
+        </form>
+      </div>
+    </div>
+  
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
