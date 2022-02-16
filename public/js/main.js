@@ -66,16 +66,3 @@ function mostrarUsuarios(usuarios) {
 function mostrarCanal(canal) {
     nombreCanal.innerText = canal;
 }
-
-// Esconder el menu 
-
-function esconderMenu() {
-    const menu = document.querySelector(".chat-sidebar");
-    if (menu.style.display === "none" && window.screen.width < 700) {
-        menu.style.display = "block";
-    } else {
-        menu.style.display = "none";
-    }
-}
-
-document.getElementById("menu").addEventListener("click", esconderMenu);

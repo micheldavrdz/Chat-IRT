@@ -7,7 +7,7 @@ const socketIO = require('socket.io');
 const formatoMensaje = require('./utils/mensajes');
 // util propia para manejar usuarios
 const { agregarUsuario, obtenerUsuario, salirUsuario, obtenerUsuariosCanal} = require('./utils/usuarios');
-const nombreBot = 'ChatBot';
+const nombreBot = 'ChatBot 🤖';
 
 const app = express();
 const server = http.createServer(app);
