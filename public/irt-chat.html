@@ -12,36 +12,18 @@
     <div class="chat-container">
       <header class="chat-header">
         <h1><i class="fa-solid fa-message"></i> Chat IRT</h1>
+        <i id="menu" class="fa-solid fa-bars"></i>
         <a href="index.html" class="btn">Salir del canal</a>
       </header>
       <main class="chat-main">
         <div class="chat-sidebar">
           <h3><i class="fa-solid fa-hashtag"></i> Nombre del canal:</h3>
-          <h2 id="room-name">General</h2>
+          <h2 id="room-name"></h2>
           <h3><i class="fa-solid fa-user"></i> Usuarios</h3>
           <ul id="users">
-            <li>Usuario 1</li>
-            <li>Usuario 2</li>
-            <li>Usuario 3</li>
-            <li>Usuario 4</li>
-            <li>Usuario 5</li>
           </ul>
         </div>
         <div class="chat-messages">
-                      <div class="message">
-                          <p class="meta">Usuario <span>9:12pm</span></p>
-                          <p class="text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-                              repudiandae.
-                          </p>
-                      </div>
-                      <div class="message">
-                          <p class="meta">Usuario <span>9:15pm</span></p>
-                          <p class="text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-                              repudiandae.
-                          </p>
-                      </div>
         </div>
       </main>
       <div class="chat-form-container">
@@ -57,7 +39,10 @@
         </form>
       </div>
     </div>
+
+    <footer>Michel Dávila Rdz</footer>
   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js" integrity="sha512-juaCj8zi594KHQqb92foyp87mCSriYjw3BcTHaXsAn4pEB1YWh+z+XQScMxIxzsjfM4BeVFV3Ij113lIjWiC2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js"></script>
   </body>

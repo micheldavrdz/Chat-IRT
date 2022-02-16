@@ -218,6 +218,12 @@ a {
     border-radius: 10px;
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-caja-texto);
+}
+
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;

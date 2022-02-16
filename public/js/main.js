@@ -1,7 +1,21 @@
 const formulario = document.getElementById('chat-form');
 const mensajesCanal = document.querySelector('.chat-messages');
+const nombreCanal = document.getElementById('room-name');
+const listaUsuarios = document.getElementById('users');
+
+//Obtener usuario y canal desde la URL sin & y demas simbolos utilizanso Qs
+const { user, channel } = Qs.parse(location.search, { ignoreQueryPrefix: true });
 
 const socket = io();
+
+//Unirse a canal
+socket.emit('entrarCanal', { user, channel });
+
+//Obtener usuarios y canal
+socket.on('usuariosCanal', ({ usuarios, canal }) => {
+    mostrarUsuarios(usuarios);
+    mostrarCanal(canal);
+});
 
 socket.on('mensaje', mensaje => {
     console.log(mensaje);
@@ -31,11 +45,37 @@ function enviarMensaje(mensaje) {
     const div = document.createElement('div');
     div.classList.add('message');
     div.innerHTML = `
-        <p class="meta">Usuario <span>4:20pm</span></p>
+        <p class="meta">${mensaje.usuario}<span> ${mensaje.hora}</span></p>
         <p class="text">
-            ${mensaje}
+            ${mensaje.texto}
         </p>
     `;
 
     mensajesCanal.appendChild(div);
 }
+
+// Agregar usuario al DOM
+function mostrarUsuarios(usuarios) {
+    listaUsuarios.innerHTML = `
+        ${usuarios.map(usuario => `<li>${usuario.nomusuario}</li>`).join('')}
+    `;
+
+}
+
+//Agregar canal al DOM
+function mostrarCanal(canal) {
+    nombreCanal.innerText = canal;
+}
+
+// Esconder el menu 
+
+function esconderMenu() {
+    const menu = document.querySelector(".chat-sidebar");
+    if (menu.style.display === "none" && window.screen.width < 700) {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+
+document.getElementById("menu").addEventListener("click", esconderMenu);
