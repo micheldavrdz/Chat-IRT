@@ -11,7 +11,7 @@ your local machine for development.
 
 ### Prerequisites
 
-For the project to work, it is necessary to have an NodeJS installed
+For the project to work, it is necessary to have NodeJS installed
 - [NodeJS](https://nodejs.org/en/)
 
 ### Installing
